@@ -6,6 +6,8 @@ import {User} from "./User/User";
 import {Header} from "./site/Header";
 import {Body} from "./site/Body";
 import {Foter} from "./site/Foter";
+import {NewComponents} from "./students/NewComponents";
+import {Students} from "./students/students";
 
 function App() {
     return (
@@ -19,6 +21,7 @@ function App() {
             <Header title={'NEW BODY'}/>
             <Body titleForBody={'NEW BODY'}/>
             <Foter titleForFoter={'NEW FOTER'}/>
+            <NewComponents students={Students}/>
         </div>
         // <Header/>
         // <Body/>

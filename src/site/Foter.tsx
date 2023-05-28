@@ -1,8 +1,8 @@
 type FoterType = {
-    titleForFoter : string
+    titleForFoter: string
 }
 
-export const Foter = (props : FoterType) => {
+export const Foter = (props: FoterType) => {
     return (
         <div>{props.titleForFoter}</div>
     )
