@@ -3,7 +3,7 @@ import './App.css';
 import {Test} from "./Test/Test";
 import {Post} from "./Post/Post";
 import {User} from "./User/User";
-import {Header} from "./site/header";
+import {Header} from "./site/Header";
 import {Body} from "./site/Body";
 import {Foter} from "./site/Foter";
 
@@ -16,7 +16,7 @@ function App() {
         //     <Post/>
         //     <User/>
         <div>
-            <Header/>
+            <Header title={'NEW BODY'}/>
             <Body/>
             <Foter/>
         </div>
