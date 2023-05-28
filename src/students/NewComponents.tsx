@@ -1,18 +1,22 @@
-type  StudetsType = {
-    students : StType
-}
-type  StType = {
-    id : number
-    name : string
-    age : number
+import {Students} from "./students";
+
+type  NewConponentsType = {
+    students: Array<StudentsType>
 }
 
-export const NewComponents = (props : StudetsType) => {
+type  StudentsType = {
+    id: number
+    name: string
+    age: number
+}
+export const NewComponents = (props: NewConponentsType) => {
     return (
-        <>
-            <h2>{props.students.id}</h2>
-            <h3>{props.students.name}</h3>
-            <h4>{props.students.age}</h4>
-        </>
+        <ul>
+            {props.students.map((item) => {
+                return (
+                    <li key={item.id}><span>{item.id}</span> <span>{item.name}</span> <span>{item.age}</span></li>
+                )
+            })}
+        </ul>
     )
 }
