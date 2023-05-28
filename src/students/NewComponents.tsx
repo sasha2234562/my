@@ -1,5 +1,3 @@
-import {Students} from "./students";
-
 type  NewConponentsType = {
     students: Array<StudentsType>
 }

@@ -1,8 +1,5 @@
 import React from 'react';
 import './App.css';
-import {Test} from "./Test/Test";
-import {Post} from "./Post/Post";
-import {User} from "./User/User";
 import {Header} from "./site/Header";
 import {Body} from "./site/Body";
 import {Foter} from "./site/Foter";
