@@ -17,8 +17,8 @@ function App() {
         //     <User/>
         <div>
             <Header title={'NEW BODY'}/>
-            <Body/>
-            <Foter/>
+            <Body titleForBody={'NEW BODY'}/>
+            <Foter titleForFoter={'NEW FOTER'}/>
         </div>
         // <Header/>
         // <Body/>

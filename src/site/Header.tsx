@@ -5,6 +5,6 @@ type HeaderType = {
 
 export const Header = (props : HeaderType) => {
     return (
-        <div>{props.title}</div>
+        <h1>{props.title}</h1>
     )
 }
