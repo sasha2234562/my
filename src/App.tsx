@@ -5,24 +5,18 @@ import {Body} from "./site/Body";
 import {Foter} from "./site/Foter";
 import {NewComponents} from "./students/NewComponents";
 import {Students} from "./students/students";
+import {TopCars} from "./Cars/topCars";
+import {topCars} from "./Cars/Cars";
 
 function App() {
     return (
-        // <div className="App">
-        //
-        //     <h1>My name is Sasha</h1>
-        //     <Test/>
-        //     <Post/>
-        //     <User/>
         <div>
             <Header title={'NEW BODY'}/>
             <Body titleForBody={'NEW BODY'}/>
             <Foter titleForFoter={'NEW FOTER'}/>
             <NewComponents students={Students}/>
+            <TopCars cars={topCars}/>
         </div>
-        // <Header/>
-        // <Body/>
-        // </div>
     );
 }
 
