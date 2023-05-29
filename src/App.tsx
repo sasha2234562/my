@@ -8,6 +8,7 @@ import {Students} from "./students/students";
 import {TopCars} from "./Cars/topCars";
 import {topCars} from "./Cars/Cars";
 import {Button, ButtonFour, ButtonTree, ButtonTwo, ButtonFive} from "./button/button";
+import {Huky} from "./huky/huky";
 
 function App() {
     const Button1Foo = (firstName : string)=> {
@@ -27,6 +28,7 @@ function App() {
     }
     return (
         <div>
+            <Huky name={"Click-Huky"}/>
             <Header title={'NEW BODY'}/>
             <Body titleForBody={'NEW BODY'}/>
             <Foter titleForFoter={'NEW FOTER'}/>
