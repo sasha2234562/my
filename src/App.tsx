@@ -7,6 +7,7 @@ import {NewComponents} from "./students/NewComponents";
 import {Students} from "./students/students";
 import {TopCars} from "./Cars/topCars";
 import {topCars} from "./Cars/Cars";
+import {Button} from "./button/button";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Foter titleForFoter={'NEW FOTER'}/>
             <NewComponents students={Students}/>
             <TopCars cars={topCars}/>
+            <Button/>
         </div>
     );
 }
