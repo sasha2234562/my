@@ -7,9 +7,24 @@ import {NewComponents} from "./students/NewComponents";
 import {Students} from "./students/students";
 import {TopCars} from "./Cars/topCars";
 import {topCars} from "./Cars/Cars";
-import {Button, ButtonFour, ButtonTree, ButtonTwo} from "./button/button";
+import {Button, ButtonFour, ButtonTree, ButtonTwo, ButtonFive} from "./button/button";
 
 function App() {
+    const Button1Foo = (firstName : string)=> {
+        console.log(firstName)
+    }
+    const Button2Foo = (firstName : string)=> {
+        console.log(firstName)
+    }
+    const Button3Foo = (firstName : string)=> {
+        console.log(firstName)
+    }
+    const Button4Foo = (firstName : string)=> {
+        console.log(firstName)
+    }
+    const ButtonStop =()=> {
+        console.log(("Button-Stop :)"))
+    }
     return (
         <div>
             <Header title={'NEW BODY'}/>
@@ -17,10 +32,11 @@ function App() {
             <Foter titleForFoter={'NEW FOTER'}/>
             <NewComponents students={Students}/>
             <TopCars cars={topCars}/>
-            <Button/>
-            <ButtonTwo/>
-            <ButtonTree/>
-            <ButtonFour/>
+            <Button name={"MyYouTubeChanel-1"} callBack={() =>Button1Foo("Sveta")}/>
+            <ButtonTwo name={"MyYouTubeChanel-2"} callBack={() =>Button2Foo("Masha")}/>
+            <ButtonTree name={"Example-Click 1"} callBack={() =>Button3Foo("Dasha")}/>
+            <ButtonFour name={"Example-Click 1"} callBack={() =>Button4Foo("Sasha")}/>
+            <ButtonFive name={"Click-stop"} callBack={ButtonStop}/>
         </div>
     );
 }
