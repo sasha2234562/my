@@ -1,4 +1,4 @@
-import {topCars} from "./Cars";
+
 
 type TopCarsType = {
     cars: Array<CarsType>
@@ -15,17 +15,21 @@ export const TopCars = (props: TopCarsType) => {
             {props.cars.map((item, index) => {
                 // debugger
                 return (
-                    <div key={index}><span>{item.manufacturer}</span> <span>{item.model}</span> <span>{item.id}</span> </div>
-                        //
-                        // <tr key={item.id}>
-                            // {/*<tr>*/}
-                            // <td>{item.manufacturer}</td>
-                            // <td>{item.model}</td>
-                            // <td>{item.id}</td>
-                            // {/*</tr>*/}
-                            // </tr>
-                        )
-                        })}
+                    <div key={index}>
+                        <span>{item.manufacturer}</span>
+                        <span>{item.model}</span>
+                        <span>{item.id}</span>
                     </div>
+                    //
+                    // <tr key={item.id}>
+                    // {/*<tr>*/}
+                    // <td>{item.manufacturer}</td>
+                    // <td>{item.model}</td>
+                    // <td>{item.id}</td>
+                    // {/*</tr>*/}
+                    // </tr>
                 )
-            }
+            })}
+        </div>
+    )
+}
