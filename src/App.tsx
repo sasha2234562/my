@@ -7,8 +7,8 @@ import {NewComponents} from "./students/NewComponents";
 import {Students} from "./students/students";
 import {TopCars} from "./Cars/topCars";
 import {topCars} from "./Cars/Cars";
-import {Button, ButtonFour, ButtonTree, ButtonTwo, ButtonFive} from "./button/button";
-import {Huky} from "./huky/huky";
+import {Button, ButtonFive, ButtonFour, ButtonTree, ButtonTwo} from "./button/button";
+import {HukyWraper} from "./huky/huky-wraper";
 
 function App() {
     const Button1Foo = (firstName : string)=> {
@@ -28,7 +28,7 @@ function App() {
     }
     return (
         <div>
-            <Huky name={"Click-Huky"}/>
+            <HukyWraper/>
             <Header title={'NEW BODY'}/>
             <Body titleForBody={'NEW BODY'}/>
             <Foter titleForFoter={'NEW FOTER'}/>
