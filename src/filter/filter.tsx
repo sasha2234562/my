@@ -1,3 +1,6 @@
+import React, {useState} from "react";
+
+
 export const Filter = ()=> {
     const [money, setMoney] = useState([
         { banknots: 'Dollars', value: 100, number: ' a1234567890' },
