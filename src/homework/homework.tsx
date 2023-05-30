@@ -1,11 +1,20 @@
 
 
 import b from "../button/button.module.css";
-export const Homework = ()=> {
+type  FT = {
+    filt : Array<FiltType>
+}
+
+type FiltType = {
+    banknots : string
+    value : number
+    number : string
+}
+export const Homework = (props : FT)=> {
     return(
         <>
             <ul>
-                {filter.map((item, index) => {
+                {props.filt.map((item, index) => {
                     return (
                         <li key={index}>
                             <span>{item.banknots}</span>

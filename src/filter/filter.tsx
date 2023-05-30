@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import b from "../button/button.module.css"
 import {Homework} from "../homework/homework";
 
 type CurrencyType = 'ALL' | 'RUBLS' | 'Dollars'
@@ -24,11 +23,11 @@ export const Filter = () => {
         filter = money.filter((item) => item.banknots === "RUBLS")
     }
 
-    function Ev(ButtonName: CurrencyType) {
+     function Ev(ButtonName: CurrencyType) {
         setButton(ButtonName)
     }
 
     return (
-        <Homework />
+        <Homework filt={filter}/>
     )
 }
