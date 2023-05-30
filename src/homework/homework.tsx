@@ -3,7 +3,7 @@
 import b from "../button/button.module.css";
 export const Homework = ()=> {
     return(
-        <div>
+        <>
             <ul>
                 {filter.map((item, index) => {
                     return (
@@ -20,6 +20,6 @@ export const Homework = ()=> {
                 <button onClick={() => Ev("RUBLS")}>RUBLS</button>
                 <button onClick={() => Ev("Dollars")}>DOLLARS</button>
             </div>
-        </div>
+        </>
     )
 }
