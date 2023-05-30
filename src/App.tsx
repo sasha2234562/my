@@ -10,12 +10,14 @@ import {topCars} from "./Cars/Cars";
 import {Button, ButtonFive, ButtonFour, ButtonTree, ButtonTwo} from "./button/button";
 import {HukyWraper} from "./huky/huky-wraper";
 import {MapRepeat, RepeatOne} from "./repeat/repeat";
+import {Filter} from "./filter/filter";
 
 function App() {
     return (
         <div >
             <RepeatOne/>
             <MapRepeat Cars={topCars}/>
+            <Filter/>
         </div>
         // const Button1Foo = (firstName : string)=> {
         //     console.log(firstName)

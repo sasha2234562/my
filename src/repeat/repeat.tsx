@@ -31,22 +31,16 @@ type CarsType = {
     manufacturer: string
     model: string
 }
-export const MapRepeat = (props : TopCars) => {
+export const MapRepeat = (props: TopCars) => {
 
     return (
         <div className={b.button}>
-            {props.Cars.map((item, index)=>{
-                return(
-                    // <div key={index}>
-                        <table key={index}>
-                            <tr>
-                                <td>Emil</td>
-                                <td>Tobias</td>
-                                <td>Linus</td>
-                            </tr>
-                        </table>
-                    // </div>
-
+            {props.Cars.map((item, index) => {
+                return (
+                    <div key={index}>
+                            <span>{item.manufacturer} </span>
+                            <span>{item.model}</span>
+                    </div>
                 )
             })}
         </div>
