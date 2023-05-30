@@ -1,5 +1,6 @@
 import b from "../button/button.module.css"
 import {useState} from "react";
+import {TopCars} from "../Cars/topCars";
 
 export const RepeatOne = () => {
     let [a, setA] = useState(0)
@@ -7,7 +8,7 @@ export const RepeatOne = () => {
         setA(++a)
     }
     const NumTwo = () => {
-        setA(--a )
+        setA(--a)
     }
     return (
         <div className={b.button}>
@@ -18,20 +19,36 @@ export const RepeatOne = () => {
     )
 }
 
-export const MapRepeat = ()=>{
-    const [money, setMoney] = useState([
-        { banknots: 'Dollars', value: 100, number: ' a1234567890' },
-        { banknots: 'Dollars', value: 50, number: ' z1234567890' },
-        { banknots: 'RUBLS', value: 100, number: ' w1234567890' },
-        { banknots: 'Dollars', value: 100, number: ' e1234567890' },
-        { banknots: 'Dollars', value: 50, number: ' c1234567890' },
-        { banknots: 'RUBLS', value: 100, number: ' r1234567890' },
-        { banknots: 'Dollars', value: 50, number: ' x1234567890' },
-        { banknots: 'RUBLS', value: 50, number: ' v1234567890' },
-    ])
-    return(
-        <div className={b.button}>
+export const topCars = [
+    {manufacturer: 'BMW', model: 'm5cs'},
+    {manufacturer: 'Mercedes', model: 'e63s'},
+    {manufacturer: 'Audi', model: 'rs6'}
+]
+type TopCars = {
+    Cars: Array<CarsType>
+}
+type CarsType = {
+    manufacturer: string
+    model: string
+}
+export const MapRepeat = (props : TopCars) => {
 
+    return (
+        <div className={b.button}>
+            {props.Cars.map((item, index)=>{
+                return(
+                    // <div key={index}>
+                        <table key={index}>
+                            <tr>
+                                <td>Emil</td>
+                                <td>Tobias</td>
+                                <td>Linus</td>
+                            </tr>
+                        </table>
+                    // </div>
+
+                )
+            })}
         </div>
     )
 }

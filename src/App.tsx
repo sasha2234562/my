@@ -15,7 +15,7 @@ function App() {
     return (
         <div >
             <RepeatOne/>
-            <MapRepeat/>
+            <MapRepeat Cars={topCars}/>
         </div>
         // const Button1Foo = (firstName : string)=> {
         //     console.log(firstName)
