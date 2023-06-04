@@ -1,25 +1,21 @@
-import i from './input.module.css';
-import {useState, ChangeEvent} from "react";
+import React, {ChangeEvent} from "react";
 
-type FullInputType= {
-    addMessage : (title: string)=>void
+type inputType = {
+    setTitle: (title: string) => void,
+    title: string
 }
-export const FullInput = (props: FullInputType) => {
-    let [title, setTitle]= useState('');
-    const onChangeInputHandler= (event: ChangeEvent<HTMLInputElement>)=> {
-        setTitle(event.currentTarget.value)
-    }
-    let [buttonTitle, seButtonTitle]= useState('');
-    const  Click = ()=> {
-        props.addMessage(title)
-        setTitle('')
-    }
-        return (
-        <div className={i.input_button}>
-            <input value={title} onChange={onChangeInputHandler}/>
-            <button onClick={Click}>Click</button>
-        </div>
-    )
+
+
+export const FullInput = (props: inputType) => {
+const onChangeHandler= (event: ChangeEvent<HTMLInputElement>)=> {
+props.setTitle(event.currentTarget.value)
+}
+
+return(
+    <div>
+        <input title={props.title} onChange={onChangeHandler}/>
+    </div>
+)
 }
 
 
