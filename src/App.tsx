@@ -1,31 +1,38 @@
 import React, {useState} from 'react';
 import './App.css';
 import {FullInput} from "./input/input";
+import {Button} from "./input/button";
 
 
 function App() {
     let [message, setMessege] = useState([
         {message: 'Message1'},
         {message: 'Message2'},
-        {message: 'Message13'}
+        {message: 'Message11'}
     ])
-    console.log(message)
-    const addMessage = (title: string) => {
-        let newMessage = {message: "Dasha"}
-        setMessege([ {message: title}, ...message])
+    const [title, setTitle] = useState('');
+    const AddMessange = (title: string) => {
+        let nesMess = {message: title}
+        setMessege([nesMess, ...message])
     }
-    // message.reverse()
+    const Click = () => {
+        AddMessange(title)
+    }
 
     return (
-        <div>
-            <FullInput addMessage={addMessage}/>
-            {message.map((item, index) => {
-                return (
-                    <div key={index}>{item.message}</div>
-                )
-            })}
-
-        </div>
+        <>
+            <div>
+                <FullInput setTitle={setTitle} title={title}/>
+                <Button title={title} setTitle={setTitle} name={'Hello'} click={Click}/>
+            </div>
+            <div>
+                {message.map((item, index) => {
+                    return (
+                        <div key={index}>{item.message}</div>
+                    )
+                })}
+            </div>
+        </>
     )
 }
 
