@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import {Homework} from "../homework/homework";
+import b from "../button/button.module.css";
+type FilterType = 'All' | 'Dollars' | 'RUBLS';
 
-type CurrencyType = 'ALL' | 'RUBLS' | 'Dollars'
-export const Filter = () => {
+export const Filter = (props : any) => {
     const [money, setMoney] = useState([
         {banknots: 'Dollars', value: 100, number: ' a1234567890'},
         {banknots: 'Dollars', value: 50, number: ' z1234567890'},
@@ -13,21 +13,39 @@ export const Filter = () => {
         {banknots: 'Dollars', value: 50, number: ' x1234567890'},
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
-    let [lokButton, setButton] = useState<CurrencyType>();
+    const [filt, setFilter] = useState<FilterType>('All')
+    let currentMoney = money;
 
-    let filter = money;
-    if (lokButton === "Dollars") {
-        filter = money.filter((item) => item.banknots === "Dollars")
+    if (filt == "Dollars") {
+        currentMoney = money.filter((item) => item.banknots === "Dollars")
     }
-    if (lokButton === "RUBLS") {
-        filter = money.filter((item) => item.banknots === "RUBLS")
+    if (filt === "RUBLS") {
+        currentMoney = money.filter((item) => item.banknots === "RUBLS")
     }
+    return currentMoney;
 
-     function Ev(ButtonName: CurrencyType) {
-        setButton(ButtonName)
+    const onClockFilter = (nameButton: FilterType) => {
+        console.log(nameButton);
+        setFilter(nameButton)
     }
-
     return (
-        <Homework filt={filter}/>
+        <>
+            <ul>
+                {currentMoney.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <span>{item.banknots} </span>
+                            <span>{item.value} </span>
+                            <span>{item.number} </span>
+                        </li>
+                    )
+                })}
+            </ul>
+            <div className={b.button}>
+                <button onClick={() => onClockFilter("Dollars")}>Dollars</button>
+                <button onClick={() => onClockFilter("RUBLS")}>RUBLS</button>
+                <button onClick={() => onClockFilter("All")}>All</button>
+            </div>
+        </>
     )
 }

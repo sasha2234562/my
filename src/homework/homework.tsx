@@ -1,34 +1,36 @@
+// import b from "../button/button.module.css";
+// import {CurrencyType} from "../filter/filter";
+// type  FT = {
+//     filt: Array<FiltType>
+//     fank  : (ButtonName: CurrencyType)=> void
+// }
+//
+// type FiltType = {
+//     banknots: string
+//     value: number
+//     number: string
+// }
+export const Homework = () => {
+//     console.log(props)
 
-
-import b from "../button/button.module.css";
-type  FT = {
-    filt : Array<FiltType>
-}
-
-type FiltType = {
-    banknots : string
-    value : number
-    number : string
-}
-export const Homework = (props : FT)=> {
-    return(
+    return (
         <>
-            <ul>
-                {props.filt.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <span>{item.banknots}</span>
-                            <span>{item.value}</span>
-                            <span>{item.number}</span>
-                        </li>
-                    )
-                })}
-            </ul>
-            <div className={b.button}>
-                <button onClick={() => Ev("ALL")}>ALL</button>
-                <button onClick={() => Ev("RUBLS")}>RUBLS</button>
-                <button onClick={() => Ev("Dollars")}>DOLLARS</button>
-            </div>
+            {/*<ul>*/}
+            {/*    {props.filt.map((item, index) => {*/}
+            {/*        return (*/}
+            {/*            <li key={index}>*/}
+            {/*                <span>{item.banknots}</span>*/}
+            {/*                <span>{item.value}</span>*/}
+            {/*                <span>{item.number}</span>*/}
+            {/*            </li>*/}
+            {/*        )*/}
+            {/*    })}*/}
+            {/*</ul>*/}
+            {/*<div className={b.button}>*/}
+            {/*    <button onClick={() => props.fank}>ALL</button>*/}
+            {/*    <button onClick={() => props.fank}>RUBLS</button>*/}
+            {/*    <button onClick={() => props.fank}>DOLLARS</button>*/}
+            {/*</div>.*/}
         </>
     )
 }
