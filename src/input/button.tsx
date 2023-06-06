@@ -1,24 +1,23 @@
-// import {ChangeEventHandler} from "React"
-
 import {ChangeEvent, useState} from "react";
 
-export const Button = ()=> {
-    let [message, setMessege] = useState([
-        {message: 'Message1'},
-        {message: 'Message2'},
-        {message: 'Message11'}
-    ])
 
-    const InputHandler= (event: ChangeEvent<HTMLInputElement>)=>{
-        console.log(event.currentTarget.value)
+type CreatMessage = {
+    creatMessage: (title: string)=> void
+}
+
+export const Button = (props : CreatMessage) => {
+    let [title, seTitle] = useState('');
+    const OnChangeHandler= (event: ChangeEvent<HTMLInputElement>)=>{
+        seTitle(event.currentTarget.value)
     }
-    const ButtonHandler=()=>{
-        console.log("Dasha")
+    const onClickButtonHandler=()=>{
+        props.creatMessage(title);
+seTitle('')
     }
-return(
-    <div>
-        <input onChange={InputHandler}/>
-        <button onClick={ButtonHandler}>Click</button>
-    </div>
-)
+
+    return (<div>
+            <input onChange={OnChangeHandler} value={title}/>
+            <button onClick={onClickButtonHandler}>Click</button>
+        </div>
+    )
 }
