@@ -9,21 +9,20 @@ function App() {
         {message: 'Message2'},
         {message: 'Message11'}
     ])
-
-    const creatMessange = (title: string) => {
-        console.log("Masha");
-        console.log(title);
-        let newMessage = {message: title}
-        setMessege([newMessage, ...message])
+    const creatMessage = (title: string)=>{
+        const newMessange = {message: title}
+        setMessege([newMessange, ...message])
     }
-    return (
+
+
+return(
+    <div>
+        <Button creatMessage={creatMessage}/>
         <div>
-            <Button creatMessage={creatMessange}/>
-            <div>
-                {message.map((item, index) => <li key={index}>{item.message}</li>)}
-            </div>
+            {message.map((item, index)=> <li key={index}>{item.message}</li>)}
         </div>
-    )
+    </div>
+)
 }
 
 export default App;
