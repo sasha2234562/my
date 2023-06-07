@@ -1,24 +1,16 @@
-import {ChangeEvent, useState} from "react";
-
-type newMessageType={
-    newMessage: (title : string)=>void
+type ButtonPropsType = {
+    name : string
+    collBack : ()=>void
 }
 
-export const Button = (props: newMessageType) => {
-    const [title, setTitle] = useState('')
-
-    const inputHandler= (event: ChangeEvent<HTMLInputElement>)=>{
-        setTitle(event.currentTarget.value)
-    }
+export const Button = (props: ButtonPropsType) => {
 const buttonHandler= ()=>{
-    props.newMessage(title );
-    setTitle('')
+    props.collBack()
 }
 
-return (
-    <div>
-        <input onChange={inputHandler} value={title}/>
-        <button onClick={buttonHandler}>Click</button>
-    </div>
-)
+    return (
+        <div>
+            <button onClick={buttonHandler}>{props.name}</button>
+        </div>
+    )
 }

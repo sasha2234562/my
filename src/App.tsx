@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Button} from "./input/button";
+import {FullInput} from "./input/input";
 
 
 function App() {
@@ -10,22 +11,15 @@ function App() {
         {message: 'Message11'}
     ])
 
-    // const [cleatMessage, setCreatMessage] = useState('')
-
-    const newMessage = (title : string)=>{
-        const  newMess = {message: title}
-        setMessege([newMess, ...message])
-    }
-
-
-return(
-    <div>
-        <Button newMessage={newMessage}/>
+    return (
         <div>
-            {message.map((item, index)=> <li key={index}>{item.message}</li>)}
+            <Button name={'Click'} collBack={()=>{}}/>
+            <FullInput/>
+            <div>
+                {message.map((item, index) => <li key={index}>{item.message}</li>)}
+            </div>
         </div>
-    </div>
-)
+    )
 }
 
 export default App;
