@@ -1,12 +1,14 @@
-type ButtonPropsType = {
-    name : string
-    collBack : ()=>void
+type buttonType = {
+    name: string
+    callBack: () => void
 }
 
-export const Button = (props: ButtonPropsType) => {
-const buttonHandler= ()=>{
-    props.collBack()
-}
+export const Button = (props: buttonType) => {
+    const buttonHandler = () => {
+    console.log('Nastya');
+    props.callBack()
+    }
+
 
     return (
         <div>
