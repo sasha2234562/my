@@ -16,6 +16,7 @@ console.log(title)
         console.log("Nastya");
         const neMessage = {message : title}
         setMessege([neMessage, ...message])
+        setTitle('')
     }
     return (
         <div>
