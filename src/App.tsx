@@ -9,15 +9,18 @@ function App() {
         {message: 'Message2'},
         {message: 'Message11'}
     ])
-    const creatMessage = (title: string)=>{
-        const newMessange = {message: title}
-        setMessege([newMessange, ...message])
+
+    // const [cleatMessage, setCreatMessage] = useState('')
+
+    const newMessage = (title : string)=>{
+        const  newMess = {message: title}
+        setMessege([newMess, ...message])
     }
 
 
 return(
     <div>
-        <Button creatMessage={creatMessage}/>
+        <Button newMessage={newMessage}/>
         <div>
             {message.map((item, index)=> <li key={index}>{item.message}</li>)}
         </div>
