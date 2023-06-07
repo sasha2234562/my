@@ -10,18 +10,21 @@ function App() {
         {message: 'Message2'},
         {message: 'Message11'}
     ])
-    const [title, setTitle] = useState('')
-console.log(title)
-    const  callBackButtonHandler=()=>{
-        console.log("Nastya");
-        const neMessage = {message : title}
-        setMessege([neMessage, ...message])
+    let [title, setTitle] = useState('')
+
+    const newTitle = (title : string)=> {
+        const newMessage= {message: title}
+        setMessege([newMessage, ...message])
+    }
+
+    const buttonHandlerClick = () => {
+newTitle(title)
         setTitle('')
     }
     return (
         <div>
-            <Button name={'Click'} collBack={callBackButtonHandler}/>
-            <FullInput setTitle={setTitle} title={title}/>
+            <Button name={'Click'} callBack={buttonHandlerClick}/>
+            <FullInput title={title} setTitle={setTitle}/>
             <div>
                 {message.map((item, index) => <li key={index}>{item.message}</li>)}
             </div>
