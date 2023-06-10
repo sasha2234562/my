@@ -1,83 +1,34 @@
-import React, {useEffect, useRef, useState} from 'react';
-// import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-// import {Simulate} from "react-dom/test-utils";
-// import click = Simulate.click;
-import {Button} from "./Button";
-import {Input} from "./Input";
+import {Button} from "./input/button";
+import {FullInput} from "./input/input";
 
-type TaskType = {
-    userId: number
-    id: number
-    title: string
-    complited: boolean
-}
 
 function App() {
+    let [message, setMessege] = useState([
+        {message: 'Message1'},
+        {message: 'Message2'},
+        {message: 'Message11'}
+    ])
+    const [newTitle, setNuwTitle] = message;
 
-    const [todos, setTodos] = useState<TaskType[]>([])
+    const buttonHandlerClick = ()=>{
+        const obj = {message : title}
+        setMessege([obj, ...message])
+        setTitle('')
+    }
+    const [title, setTitle] = useState('');
 
-    // const [title, setTitle]= useState('')
-let title= useRef<HTMLInputElement>(null)
-    const fetchQuery = () => {
-        fetch('https://jsonplaceholder.typicode.com/todos/')
-            .then(response => response.json())
-            .then(json => setTodos(json))
-    }
-    useEffect(() => {
-        fetchQuery()
-    }, [])
 
-    const click1 = () => {
-        fetchQuery()
-    }
-    const click2 = () => {
-        setTodos([])
-    }
-
-    const todoAdd = ()=>{
-        // const todo = {
-        //     userId: 100200,
-        //     id: todos.length +1,
-        //     title: title.current.value,
-        //     complited: false
-        // }
-        // setTodos([todo,...todos])
-        if(title.current) {
-            const todo = {
-                userId: 100200,
-                id: todos.length +1,
-                title: title.current.value,
-                complited: false
-            }
-            setTodos([todo, ...todos])
-            title.current.value= ''
-        }
-    }
     return (
-        <div className="App">
-            <Button name={'Click1'} callBack={click1}/>
-            <Button name={'Click2'} callBack={click2}/>
+        <div>
+            <Button name={'Click'} callBack={buttonHandlerClick}/>
+            <FullInput title={title} setTitle={setTitle}/>
             <div>
-                <Button name={'+'} callBack={todoAdd}/>
-                <Input title={title} />
+                {message.map((item, index) => <li key={index}>{item.message}</li>)}
             </div>
-            <ul>
-            {todos.map((elem, index) => {
-
-
-                return (
-                    <li key={index}>
-                        <input type={"checkbox"} checked={elem.complited}/>
-                        <span>{elem.id}---</span>
-                        <span>{elem.title}</span>
-                    </li>
-                )
-            })}
-        </ul>
-</div>
-)
-    ;
+        </div>
+    )
 }
 
 export default App;
