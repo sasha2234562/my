@@ -3,7 +3,6 @@ import './App.css';
 import {Button} from "./input/button";
 import {FullInput} from "./input/input";
 
-
 function App() {
     let [message, setMessege] = useState([
         {message: 'Message1'},

@@ -1,0 +1,22 @@
+.button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 11px;
+    align-items: center;
+}
+.button> button{
+    width: 231px;
+    height: 49px;
+    font-size: 20px;
+    color: aliceblue;
+    background-color: dodgerblue;
+    border: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 15px;
+}
+.button > button:hover {
+    background-color: blue;
+    color: beige;
+}
