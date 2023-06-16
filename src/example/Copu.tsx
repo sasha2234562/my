@@ -1,13 +1,13 @@
-import {moneyType} from "./example";
+import {FilterType, moneyType} from "./example";
 
 type propsMoneyType = {
-    filterMoney: (value: string) => void;
+    filterMoney: (value: FilterType) => void;
     money: Array<moneyType>
 }
 
 export function Copu(props: propsMoneyType) {
 
-    function buttonHandler(value: string) {
+    function buttonHandler(value: FilterType) {
         props.filterMoney(value)
     }
 
