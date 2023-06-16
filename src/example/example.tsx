@@ -6,6 +6,7 @@ export type moneyType = {
     value: number,
     number: string
 }
+export type FilterType = 'all' | 'Dollars' | 'RUBLS';
 
 export function Example() {
 
@@ -20,24 +21,21 @@ export function Example() {
         {banknots: 'Dollars', value: 50, number: ' x1234567890'},
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
     ])
-    const [filter, setFilter] = useState('all');
-    const currentMoney = money;
+    const [filter, setFilter] = useState<FilterType>('all');
+    let currentMoney = money;
     if (filter === 'Dollars') {
         currentMoney = money.filter((item) => item.banknots === 'Dollars')
     }
     if (filter === 'RUBLS') {
         currentMoney = money.filter((item) => item.banknots === 'RUBLS')
     }
-    return currentMoney
 
-    function filterMoney(value: string) {
-        console.log(value);
+    function filterMoney(value: FilterType) {
         setFilter(value)
     }
-
     return (
         <div>
-            <Copu money={money} filterMoney={filterMoney}/>
+            <Copu money={currentMoney} filterMoney={filterMoney}/>
         </div>
     )
 }
