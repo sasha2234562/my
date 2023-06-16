@@ -16,7 +16,7 @@ export const Filter = (props : any) => {
     const [filt, setFilter] = useState<FilterType>('All')
     let currentMoney = money;
 
-    if (filt == "Dollars") {
+    if (filt === "Dollars") {
         currentMoney = money.filter((item) => item.banknots === "Dollars")
     }
     if (filt === "RUBLS") {
