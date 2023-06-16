@@ -20,7 +20,6 @@ function App() {
     }
     const [title, setTitle] = useState('');
 
-
     return (
         <div>
             <Button name={'Click'} callBack={buttonHandlerClick}/>
