@@ -36,7 +36,7 @@ export function Example() {
 
     function inputAdd() {
         const  inp  = {banknots: title, value: 100, number: ' a1234567890'};
-        currentMoney = [inp, ...money];
+        setCurrentMoney([inp, ...currentMoney]);
         setTitle('')
     }
 
