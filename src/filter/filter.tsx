@@ -25,7 +25,6 @@ export const Filter = (props : any) => {
     return currentMoney;
 
     const onClockFilter = (nameButton: FilterType) => {
-        console.log(nameButton);
         setFilter(nameButton)
     }
     return (
