@@ -3,6 +3,7 @@ import './App.css';
 import {Button} from "./input/button";
 import {FullInput} from "./input/input";
 import {UseState} from "./useState/usestate";
+import {Example} from "./example/example";
 
 function App() {
     let [message, setMessege] = useState([
@@ -12,8 +13,8 @@ function App() {
     ])
     const [newTitle, setNuwTitle] = message;
 
-    const buttonHandlerClick = ()=>{
-        const obj = {message : title}
+    const buttonHandlerClick = () => {
+        const obj = {message: title}
         setMessege([obj, ...message])
         setTitle('')
     }
@@ -28,6 +29,7 @@ function App() {
                 {message.map((item, index) => <li key={index}>{item.message}</li>)}
             </div>
             <UseState/>
+            <Example/>
         </div>
     )
 }
