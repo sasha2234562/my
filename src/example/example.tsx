@@ -28,7 +28,6 @@ export function Example() {
         currentMoney = money.filter((item) => item.banknots === 'RUBLS')
     }
     let [title, setTitle] = useState('');
-    console.log(title)
 
     function filterMoney(value: FilterType) {
         setFilter(value)
