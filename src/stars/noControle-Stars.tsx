@@ -9,8 +9,12 @@ export function NewStars() {
     function click(star: number) {
         setValue(star)
     }
+    let classValue = {
+        display: 'flex',
+        margin: '5px'
+    }
     return (
-        <div>
+        <div style={classValue}>
             <Stars selected={value > 0} click={click} value={1}/>
             <Stars selected={value > 1} click={click} value={2}/>
             <Stars selected={value > 2} click={click} value={3}/>
