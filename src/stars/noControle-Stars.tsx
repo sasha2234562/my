@@ -6,13 +6,18 @@ export function NewStars() {
 
     let [value, setValue] = useState(0)
 
+    function click(star: number) {
+        setValue(star)
+    }
+
+    console.log(value)
     return (
         <div>
-            <Stars selected={value > 0}/><button onClick={()=>setValue(1)}>1</button>
-            <Stars selected={value > 1}/><button onClick={()=>setValue(2)}>2</button>
-            <Stars selected={value > 2}/><button onClick={()=>setValue(3)}>3</button>
-            <Stars selected={value > 3}/><button onClick={()=>setValue(4)}>4</button>
-            <Stars selected={value > 4}/><button onClick={()=>setValue(5)}>5</button>
+            <Stars selected={value > 0} click={click} value={1}/>
+            <Stars selected={value > 1} click={click} value={2}/>
+            <Stars selected={value > 2} click={click} value={3}/>
+            <Stars selected={value > 3} click={click} value={4}/>
+            <Stars selected={value > 4} click={click} value={5}/>
         </div>
     )
 }
