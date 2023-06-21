@@ -4,7 +4,7 @@ import {useState} from "react";
 
 export function NewStars() {
 
-    let [value, setValue] = useState(1)
+    let [value, setValue] = useState(0)
 
     return (
         <div>
