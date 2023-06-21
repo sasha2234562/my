@@ -4,6 +4,7 @@ import {Button} from "./input/button";
 import {FullInput} from "./input/input";
 import {UseState} from "./useState/usestate";
 import {Example} from "./example/example";
+import {UseStateTwo} from "./useState/useStateTwo";
 
 function App() {
     let [message, setMessege] = useState([
@@ -28,6 +29,7 @@ function App() {
                 {message.map((item, index) => <li key={index}>{item.message}</li>)}
             </div>
             <UseState/>
+            <UseStateTwo/>
             <Example/>
         </div>
     )
