@@ -9,8 +9,6 @@ export function NewStars() {
     function click(star: number) {
         setValue(star)
     }
-
-    console.log(value)
     return (
         <div>
             <Stars selected={value > 0} click={click} value={1}/>
