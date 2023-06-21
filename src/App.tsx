@@ -5,6 +5,7 @@ import {FullInput} from "./input/input";
 import {UseState} from "./useState/usestate";
 import {Example} from "./example/example";
 import {UseStateTwo} from "./useState/useStateTwo";
+import {NewStars} from "./stars/noControle-Stars";
 
 function App() {
     let [message, setMessege] = useState([
@@ -31,6 +32,7 @@ function App() {
             <UseState/>
             <UseStateTwo/>
             <Example/>
+            <NewStars/>
         </div>
     )
 }
