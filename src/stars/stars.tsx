@@ -10,8 +10,12 @@ export function Stars(props: propsType) {
         props.click(props.value)
     }
 
+    let style = {
+        margin: '6px',
+        cursor: 'pointer'
+    }
     return (
-        <div>
+        <div style={style}>
             <span onClick={onClickHandler}>{props.selected ? <b>star</b> : 'star'}</span>
         </div>
     )
