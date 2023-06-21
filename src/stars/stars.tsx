@@ -1,9 +1,6 @@
-
-
 type propsType = {
     selected: boolean
     click: (star: number) => void
-    // steValue: (n: number)=>void
     value: number
 }
 
@@ -15,7 +12,7 @@ export function Stars(props: propsType) {
 
     return (
         <div>
-            {props.selected ? <span onClick={onClickHandler}><b>star</b></span> : <span onClick={onClickHandler}>star</span>}
+            <span onClick={onClickHandler}>{props.selected ? <b>star</b> : 'star'}</span>
         </div>
     )
 }
