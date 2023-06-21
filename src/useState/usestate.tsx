@@ -4,7 +4,8 @@ export function UseState() {
     let conteiner = {
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        cursor: 'pointer'
     }
     let [status, usestatus] = useState(true)
 
@@ -52,6 +53,7 @@ export function UseState() {
         fontSize: '53px',
         color: '#c40ce3'
     }
+
 
     function On(){
         usestatus(true)
