@@ -86,7 +86,7 @@ export function UseState() {
                 </div>
                 <Range style={range} onClick={onClick}/>
             </div>
-        </div> : <div>
+        </div> : <div style={conteiner}>
           <Range style={range} onClick={onClick}/>
       </div>
     )
