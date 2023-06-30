@@ -33,7 +33,6 @@ function App() {
             <UseStateTwo/>
             <Example/>
             <NewStars/>
-            <Button name={"Button evening"} callBack={buttonHandlerClick}/>
         </div>
     )
 }
