@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import {Button} from "./input/button";
 import {FullInput} from "./input/input";
 import {UseState} from "./useState/usestate";
 import {Example} from "./example/example";
 import {UseStateTwo} from "./useState/useStateTwo";
 import {NewStars} from "./stars/noControle-Stars";
+import {Button} from "./input/button";
 
 function App() {
     let [message, setMessege] = useState([
