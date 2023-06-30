@@ -12,7 +12,7 @@ export function Stars(props: propsType) {
 
     let style = {
         margin: '6px',
-        fontSize: '21px',
+        fontSize: '24px',
         cursor: 'pointer',
         color:    props.value === 0 ? 'black'
                 : props.value === 1 ? 'yellow'
