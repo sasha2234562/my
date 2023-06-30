@@ -15,3 +15,4 @@ export const Button = (props: buttonType) => {
         </div>
     )
 }
+
