@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Range} from "./range";
 
 export function UseState() {
     let conteiner = {
@@ -11,7 +12,7 @@ export function UseState() {
 
 
     let on = {
-        display:'flex',
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         padding: '11px',
@@ -26,7 +27,7 @@ export function UseState() {
     }
 
     let off = {
-        display:'flex',
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         padding: '11px',
@@ -55,27 +56,38 @@ export function UseState() {
     }
 
 
-    function On(){
+    function On() {
         usestatus(true)
         useNumber(++number)
     }
-    function Off(){
+
+    function Off() {
         usestatus(false)
         useNumber(0)
     }
 
+    let [vanish, setVanish] = useState<boolean>(true)
+
+    const onClick = (value: boolean) => {
+        setVanish(!vanish)
+    }
+
     return (
-        <div>
+      vanish ?  <div>
             <div style={numberStyle}>{number}</div>
             <div style={conteiner}>
-                <div  style={on} onClick={
+                <div style={on} onClick={
                     On
-                }>On</div>
+                }>On
+                </div>
                 <div style={off} onClick={
                     Off
-                }>Off</div>
-                <div style={range}></div>
+                }>Off
+                </div>
+                <Range style={range} onClick={onClick}/>
             </div>
-        </div>
+        </div> : <div>
+          <Range style={range} onClick={onClick}/>
+      </div>
     )
 }
