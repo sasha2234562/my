@@ -1,12 +1,15 @@
+import {useState} from "react";
 
 type propsType = {
     hide: ()=> void
+    title: boolean
+    setTitle: (value: boolean)=>void
 }
 
 export const ExampleTitle=(props: propsType)=>{
 
     const onclickHandler = ()=> {
-        return
+        props.hide()
     }
 
     return(
