@@ -6,6 +6,7 @@ import {Example} from "./example/example";
 import {UseStateTwo} from "./useState/useStateTwo";
 import {NewStars} from "./stars/noControle-Stars";
 import {Button} from "./input/button";
+import {ExampleAccardion} from "./example-homework-callBacks1/example-accardion";
 
 function App() {
     let [message, setMessege] = useState([
@@ -33,6 +34,7 @@ function App() {
             <UseStateTwo/>
             <Example/>
             <NewStars/>
+            <ExampleAccardion/>
         </div>
     )
 }
