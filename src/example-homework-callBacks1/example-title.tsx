@@ -1,5 +1,4 @@
 type propsType = {
-    hide: () => void
     title: boolean
     setTitle: (value: boolean) => void
 }
