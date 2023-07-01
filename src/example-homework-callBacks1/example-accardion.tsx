@@ -1,10 +1,16 @@
 import {ExampleTitle} from "./example-title";
 
 
-export const ExampleAccardion = ()=> {
-    return(
+export const ExampleAccardion = () => {
+
+    const hide = ()=> {
+        console.log('Dasha')
+    }
+
+
+    return (
         <div>
-<ExampleTitle/>
+            <ExampleTitle hide={hide}/>
         </div>
     )
 }
