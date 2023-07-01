@@ -17,13 +17,13 @@ export const ExampleTitle = (props: propsType) => {
             <h1 onClick={onclickHandler}>Click me now</h1>
             {
                 props.title &&
-                <ol>
+                <ul>
                     <li>one</li>
                     <li>two</li>
                     <li>tree</li>
                     <li>four</li>
                     <li>five</li>
-                </ol>
+                </ul>
             }
         </div>
     )
