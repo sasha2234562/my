@@ -1,27 +1,30 @@
 import {useState} from "react";
 
 type propsType = {
-    hide: ()=> void
+    hide: () => void
     title: boolean
-    setTitle: (value: boolean)=>void
+    setTitle: (value: boolean) => void
 }
 
-export const ExampleTitle=(props: propsType)=>{
+export const ExampleTitle = (props: propsType) => {
 
-    const onclickHandler = ()=> {
-        props.hide()
+    const onclickHandler = () => {
+        props.setTitle(!props.title)
     }
 
-    return(
+    return (
         <div>
             <h1 onClick={onclickHandler}>Click me now</h1>
-<ol>
-    <li>one</li>
-    <li>two</li>
-    <li>tree</li>
-    <li>four</li>
-    <li>five</li>
-</ol>
+            {
+                props.title &&
+                <ol>
+                    <li>one</li>
+                    <li>two</li>
+                    <li>tree</li>
+                    <li>four</li>
+                    <li>five</li>
+                </ol>
+            }
         </div>
     )
 }
